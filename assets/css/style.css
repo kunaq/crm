@@ -772,6 +772,29 @@ h6 {
   background-color: #D5161E;
 }
 
+
+/* ------------------gestion oportunidades---------------------- */
+
+.tituloGO{
+  display: flex;
+  margin: 11vh 0 0 10em;
+  flex-wrap: nowrap;
+}
+.botonesOG{
+  margin: 0em 0em 0em 38em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+}
+.botonesOG img{
+  width: 5em;
+}
+.cardGO{
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
