@@ -793,7 +793,11 @@ h6 {
 }
 .cardGO{
   text-align: center;
+  margin-right: 2px;
 }
+/* .carboton{
+  margin: 0em 0em 0em 0em;
+} */
 
 /*--------------------------------------------------------------
 # Dashboard
