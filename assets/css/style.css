@@ -376,12 +376,12 @@ h6 {
 
 @media (min-width: 1200px) {
   .logo {
-    width: 280px;
+    width: 3em;
   }
 }
 
 .logo img {
-  width: 60%;
+  width: 3em;
 }
 
 .logo span {
@@ -394,7 +394,7 @@ h6 {
 .header {
   transition: all 0.5s;
   z-index: 997;
-  height: 90px;
+  height: 3em;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
   background-color: #fff;
   padding-left: 20px;
@@ -474,6 +474,7 @@ h6 {
 --------------------------------------------------------------*/
 .header-nav ul {
   list-style: none;
+  color: white;;
 }
 
 .header-nav>ul {
@@ -586,7 +587,7 @@ h6 {
   font-size: 18px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #444444;
+  color: white;
 }
 
 .header-nav .profile .dropdown-header span {
@@ -1280,4 +1281,29 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #AA1219;
+}
+
+/*-----------------------------------------------------------
+dropdown
+-----------------------------------------------------------*/
+
+.dropend .dropdown-toggle {
+  color: #AA1219;
+  margin-left: 1em;
+}
+
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+@media screen and (min-width: 769px) {
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  .dropend .dropdown-toggle {
+    margin-left: 0.5em;
+  }
 }
