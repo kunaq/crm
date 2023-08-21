@@ -29,6 +29,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="assets/css/fullCalendarCustom.css">
+
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.5.0
   * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
@@ -133,125 +135,27 @@
     <div class="container g-2 py-4">
       <div class="row tituloGO">
         <div class="col-4 col-md-4 pagetitle">
-          <h1>Gestión de oportunidades</h1>
+          <h1>Agenda</h1>
           <nav>
               <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="welcome.html">Inicio</a></li>
               <li class="breadcrumb-item active">Comercial</li>
               <li class="breadcrumb-item active">Prospectos</li>
-              <li class="breadcrumb-item active">Gestión de oportunidades</li>
+              <li class="breadcrumb-item active">Agenda</li>
               </ol>
           </nav>
         </div><!-- End Page Title -->
-        
-        <div class="offset-md-5 col-6 col-md-3 botonesOG">
-          <button><a href="agenda.html"><img src="assets/img/agenda.png" alt="no hay imagen"></a></button>
-          <button><img src="assets/img/warning.png" alt="no hay imagen"><a href="http://"></a></button>
-          <button><img src="assets/img/atraso.png" alt="no hay imagen"><a href="http://"></a></button>
-        </div>
       </div>
     </div>
     <div class="container justify-content-center align-items-center g-2 py-4">
       <div class="row ">
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Contacto inicial</h5>
-            <p class="card-text">12</p>
-          </div>
-        </div>
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Llamadas</h5>
-            <p class="card-text">4</p>
-          </div>
-        </div>
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Visita Camposanto</h5>
-            <p class="card-text">2</p>
-          </div>
-        </div>
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Visita Casa</h5>
-            <p class="card-text">3</p>
-          </div>
-        </div>
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Cotización</h5>
-            <p class="card-text">2</p>
-          </div>
-        </div>
-        <div class="card cardGO col-12 col-md-2">
-          <div class="btn card-body">
-            <h5 class="card-title">Venta</h5>
-            <p class="card-text">15,000,000.00</p>
-          </div>
-        </div>
+        <div id='calendar' style="height: 28rem;"></div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row justify-content-center align-items-center g-2">
-        <div class="table-responsive">
-          <table class="table table table-striped table-hover">
-            <thead style="background-color: #D5161E; color: white;">
-              <tr>
-                <th scope="col">Prospecto</th>
-                <th scope="col">Servicio ofrecido</th>
-                <th scope="col">Importe</th>
-                <th scope="col">Clasificación</th>
-                <th scope="col">Actividad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="">
-                <td>Luis Mario Gomez Perez</td>
-                <td>Quintuple</td>
-                <td>S/ 50,000</td>
-                <td><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></td>
-                <td style="font-size: 1.5em;"><a href="datosPersonales.html" style="color: black;"><i class="bi bi-list-task"></i>&nbsp;</a><i class="bi bi-telephone-outbound"></i>&nbsp;<i class="bi bi-house-up"></i>&nbsp;<i class="bi bi-receipt"></i>&nbsp;<i class="bi bi-cash-stack"></i></td>
-              </tr>
-              <tr class="">
-                <td>Milagros María Huaman Rojas</td>
-                <td>Quintuple</td>
-                <td>S/ 50,000</td>
-                <td><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></td>
-                <td style="font-size: 1.5em;"><i class="bi bi-list-task">&nbsp;<i class="bi bi-telephone-outbound">&nbsp;</i><i class="bi bi-house-up"></i>&nbsp;<i class="bi bi-receipt"></i>&nbsp;<i class="bi bi-cash-stack"></i></td>
-              </tr>
-              <tr class="">
-                <td>Alfredo José Quintana Torres</td>
-                <td>Quintuple</td>
-                <td>S/ 50,000</td>
-                <td><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></td>
-                <td style="font-size: 1.5em;"><i class="bi bi-list-task">&nbsp;<i class="bi bi-telephone-outbound">&nbsp;</i><i class="bi bi-house-up"></i>&nbsp;<i class="bi bi-receipt"></i>&nbsp;<i class="bi bi-cash-stack"></i></td>
-              </tr>
-              <tr class="">
-                <td>Adriana María Martinez Perez</td>
-                <td>Quintuple</td>
-                <td>S/ 50,000</td>
-                <td><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></td>
-                <td style="font-size: 1.5em;"><i class="bi bi-list-task">&nbsp;<i class="bi bi-telephone-outbound">&nbsp;</i><i class="bi bi-house-up"></i>&nbsp;<i class="bi bi-receipt"></i>&nbsp;<i class="bi bi-cash-stack"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-      </div>
-    </div>
-
   <main id="main" class="main">
-    
-
     <section class="section contact" style="margin-top: 5rem; margin-bottom: 5rem;">
-
-
-      
-
-
+        
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -275,6 +179,43 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+  <script type="text/javascript">
+    window.onload= function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'es-PE', // Cambia la configuración local a español de Perú
+            initialView: 'dayGridMonth',
+            scrollTime: false, // Desactiva el desplazamiento de la hora
+            initialView: 'timeGridWeek',
+            headerToolbar: {
+                start: 'dayGridMonth,timeGridWeek,timeGridDay',
+                center: 'title',
+                end: 'prev,next'
+            },
+            buttonText: {
+                today: 'Hoy', // Cambia el texto del botón "Today" a "Hoy"
+                month: 'Mes',
+                week: 'Semana',
+                day: 'Día'
+            },
+
+            eventDidMount: function(info) {
+                var tooltip = new Tooltip(info.el, {
+                    title: info.event.extendedProps.description,
+                    placement: 'top',
+                    trigger: 'hover',
+                    container: 'body'
+                });
+            },
+
+        });
+        // Ajusta el tamaño del contenedor del calendario para que sea lo suficientemente grande
+        calendarEl.style.height = '100%';
+        calendar.render();
+    }
+  </script>
 
 </body>
 
