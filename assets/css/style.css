@@ -266,6 +266,50 @@ h6 {
   padding: 0 20px 20px 20px;
 }
 
+.cardGO .contactoIni {
+  padding: 0 20px 20px 20px;
+  background-color: #C45911;
+  color: white;
+}
+
+.cardGO .presentacion {
+  padding: 0 20px 20px 20px;
+  background-color: #FFC000;
+  color: white;
+}
+
+.cardGO .cotizacion {
+  padding: 0 20px 20px 20px;
+  background-color: #70AD47;
+  color: white;
+}
+
+.cardGO .visita {
+  padding: 0 20px 20px 20px;
+  background-color: #0070C0;
+  color: white;
+}
+
+.cardGO .hot{
+  padding: 0 20px 20px 20px;
+  background-color: rosybrown;
+  color: white;
+}
+
+.cardGO .venta {
+  padding: 0 20px 20px 20px;
+  background-color: #7030A0;
+  color: white;
+}
+
+.cardGO-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 .card-img-overlay {
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -509,6 +553,7 @@ h6 {
   font-size: 12px;
   padding: 3px 6px;
 }
+
 
 .header-nav .notifications {
   inset: 8px -15px auto auto !important;
@@ -796,6 +841,48 @@ h6 {
   text-align: center;
   /* margin-right: 2px; */
 }
+
+.botonesOG  .badge-number {
+  position: relative;
+  inset: -30px 6px auto auto;
+  font-weight: normal;
+  font-size: 1em;
+  padding: 3px 6px;
+}
+
+.botonesOG .notifications {
+  inset: 8px -15px auto auto !important;
+}
+
+.botonesOG .notifications .notification-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  transition: 0.3s;
+}
+
+.botonesOG .notifications .notification-item i {
+  margin: 0 20px 0 10px;
+  font-size: 24px;
+}
+
+.botonesOG .notifications .notification-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.botonesOG .notifications .notification-item p {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #919191;
+}
+
+.botonesOG .notifications .notification-item:hover {
+  background-color: #f6f9ff;
+}
+
+
 /* .carboton{
   margin: 0em 0em 0em 0em;
 } */
