@@ -25,6 +25,8 @@
   <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@5.0.4/css/bootstrap5-toggle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -132,15 +134,23 @@
 
     <div class="container g-2 py-4">
       <div class="row tituloGO">
-        <div class="col-4 col-md-4 pagetitle">
-          <h1>Datos Personales</h1>
+        <div class="col-4 col-md-6 pagetitle">
+          <h1>Datos del Prospecto</h1>
           <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-              <li class="breadcrumb-item active">Datos Personales</li>
+              <li class="breadcrumb-item">Comercial</li>
+              <li class="breadcrumb-item">Prospectos</li>
+              <li class="breadcrumb-item"><a href="gestionOportunidades.html">Gestión de oportunidades</a></li>
+              <li class="breadcrumb-item active">Datos del Prospecto</li>
             </ol>
           </nav>
         </div><!-- End Page Title -->
+        <div class="offset-md-5 col-6 col-md-1 botonesOG">
+          <button type="button" class="btn btn-light text-danger mb-2">
+            <a href="gestionOportunidades.html"><i class="bi bi-reply-fill" style="font-size: 3em;"></i></a>
+          </button>
+        </div>
       </div>
     
       <section class="section">
@@ -194,6 +204,13 @@
                     </div>
                   </div>
                 </form><!-- End Horizontal Form -->
+                <div class="row">
+                  <div class="offset-md-11 col-6 col-md-1 botonesOG">
+                    <button type="button" class="btn btn-light text-danger mb-2" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                      <a href="#"><i class="bi bi-window-plus" style="font-size: 3em;"></i></a>
+                    </button>
+                  </div>
+                </div>
 
                 <table class="table table-striped">
                   <thead>
@@ -213,7 +230,7 @@
                         <i class="bi bi-trash3-fill" style="color: white;"></i>&nbsp;
                         <i class="bi bi-check-all" ></i>&nbsp;
                       </td>
-                      <td>26/08/2023</td>
+                      <td>26/08/2023 09:45 AM</td>
                       <td>Llamada</td>
                       <td>Completado</td>
                       <td>La llamada es en horario de oficina del cliente</td>
@@ -221,11 +238,11 @@
                     <tr>
                       <td>
                         <i class="bi bi-car-front-fill" style="color: green;"></i>&nbsp;
-                        <i class="bi bi-pencil-square"></i>&nbsp;
-                        <i class="bi bi-trash3-fill"></i>&nbsp;
-                        <i class="bi bi-check"></i>&nbsp;
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" style="color:black"><i class="bi bi-pencil-square"></i>&nbsp;</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#borrarModal" style="color:black"><i class="bi bi-trash3-fill"></i>&nbsp;</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#verticalycentered" style="color:black"><i class="bi bi-check"></i>&nbsp;</a>
                       </td>
-                      <td>30/08/2023</td>
+                      <td>30/08/2023 11:00 AM</td>
                       <td>Visita al camposanto</td>
                       <td>Pendiente</td>
                       <td>Se irá con 3 familiares del cliente</td>
@@ -237,7 +254,7 @@
                         <i class="bi bi-trash3-fill"></i>&nbsp;
                         <i class="bi bi-check"></i>&nbsp;
                       </td>
-                      <td>30/08/2023</td>
+                      <td>30/08/2023 2:15 PM</td>
                       <td>Llamada</td>
                       <td>Pendiente</td>
                       <td>Llamar luego del mediodía</td>
@@ -250,6 +267,94 @@
             </div>
         </div>
       </section>
+    </div>
+
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true" data-bs-backdrop="false" data-bs-focus="false">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalRegistroLabel">Nueva actividad</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="mb-3 col-md-9">
+                  <label for="select" class="form-label">Actividad:</label>
+                  <select class="form-select" name="" id="">
+                    <option value="A">Contacto inicial</option>
+                    <option value="B">Presentación</option>
+                    <option value="C">Llamada</option>
+                    <option value="A">Cotización</option>
+                    <option value="B">Visita a camposanto</option>
+                    <option value="C">Pre-cierre</option>
+                  </select>
+                </div>
+                <div class="mb-3 col-md-2">
+                  <label for="gridCheck1" class="col-form-label">Movilidad:</label>
+                  <input type="checkbox" data-toggle="toggle" id="movilidad" data-onlabel="SI" data-offlabel = "NO" data-onstyle ="danger"  unchecked>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-9">
+                  <label for="fhcLimite" class="form-label">Fecha límite:</label>
+                  <input class="form-control" type="text" name="" id="fhcLimite">
+                </div>
+                <div class="mb-3 col-md-3">
+                  <label for="gridCheck2" class="col-form-label">Reprogramar:</label>
+                  <input type="checkbox" data-toggle="toggle" id="reprogramar" data-onlabel="SI" data-offlabel = "NO" data-onstyle ="danger"  unchecked>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Comentarios:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="verticalycentered" tabindex="-1" aria-labelledby="verticalycenteredLabel" aria-hidden="true" data-bs-backdrop="false" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Completar Actividad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ¿Esta seguro de COMPLETAR esta acticvidad?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Completar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="borrarModal" tabindex="-1" aria-labelledby="borrarModalLabel" aria-hidden="true" data-bs-backdrop="false" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Eliminar Actividad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ¿Esta seguro de Eliminar esta acticvidad?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Completar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
   <!-- ======= Footer ======= -->
@@ -270,9 +375,25 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@5.0.4/js/bootstrap5-toggle.ecmas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr@4.6.13/dist/l10n/es.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script type="text/javascript">
+    document.querySelectorAll('input[type=checkbox][data-toggle="toggle"]').forEach(function(ele) {
+        ele.bootstrapToggle();
+    });
+    flatpickr("#fhcLimite",{
+      locale:"es",
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      time_24hr: false
+      //añadir si tienes un el fltpicker en un modal (data-bs-focus="false)"
+    });
+  </script>
 
 </body>
 

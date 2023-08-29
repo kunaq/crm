@@ -146,7 +146,7 @@
         
         <div class="offset-md-5 col-6 col-md-3 botonesOG">
           <button type="button" class="btn btn-light text-danger mb-2">
-            <i class="bi bi-calendar2-week" style="font-size: 3em;"></i>
+            <a href="agenda.html"><i class="bi bi-calendar2-week" style="font-size: 3em;"></i></a>
           </button>
           <button type="button" class="btn btn-light text-danger mb-2 nav-link nav-icon" data-bs-toggle="dropdown">
             <i class="bi bi-exclamation-triangle-fill" style="font-size: 3em;"></i><span class="badge badge-number bg-warning text-white">4</span>
@@ -313,7 +313,7 @@
         </div>
         <div class="card cardGO col-12 col-md-2">
           <div class="btn card-body hot">
-            <h5 class="cardGO-title">Cotización caliente</h5>
+            <h5 class="cardGO-title">Pre-cierre</h5>
             <p class="card-text">2</p>
           </div>
         </div>
@@ -336,7 +336,7 @@
                 <th scope="col">Servicio ofrecido</th>
                 <th scope="col">Importe</th>
                 <th scope="col">Clasificación</th>
-                <th scope="col" style="width: 15em;">Actividad&nbsp;&nbsp;&nbsp;<i class="bi bi-info-circle" style="align-self: end;"></i></th>
+                <th scope="col" style="width: 15em;">Actividad&nbsp;&nbsp;&nbsp;<a href="#" style="color: white;" data-bs-toggle="modal" data-bs-target="#modalLeyenda" ><i class="bi bi-info-circle" style="align-self: end;"></i></a></th>
               </tr>
             </thead>
             <tbody>
@@ -345,7 +345,14 @@
                 <td>Quintuple</td>
                 <td>S/ 50,000</td>
                 <td>A</td>
-                <td style="font-size: 1.5em;"><a href="datosProspectos.html" style="color: black;"><i class="bi bi-list-task"></i>&nbsp;</a><i class="bi bi-person-vcard" style="color: gold;"></i>&nbsp;<i class="bi bi-people-fill"></i>&nbsp;<i class="bi bi-receipt"></i>&nbsp;<i class="bi bi-house-up"></i>&nbsp;<i class="bi bi-fire"></i>&nbsp;<i class="bi bi-cash-stack"></i></td>
+                <td style="font-size: 1.5em;">
+                  <a href="datosProspectos.html" style="color: black;"><i class="bi bi-list-task"></i></a>
+                  <i class="bi bi-person-vcard" style="color: gold;"></i>
+                  <i class="bi bi-people-fill"></i>
+                  <i class="bi bi-receipt"></i>
+                  <i class="bi bi-house-up"></i>
+                  <i class="bi bi-fire"></i>
+                  <i class="bi bi-cash-stack"></i></td>
               </tr>
               <tr class="">
                 <td>Milagros María Huaman Rojas</td>
@@ -385,6 +392,26 @@
 
 
     </section>
+
+    <div class="modal modal-sm fade" id="modalLeyenda" tabindex="-1" aria-labelledby="modalLeyendaLabel" aria-hidden="true" data-bs-backdrop="false" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Leyenda de estados</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <i class="bi bi-square-fill" style="color: gold;"></i>&nbsp;&nbsp;Pendiente <br>
+            <i class="bi bi-square-fill" style="color: orangered;"></i>&nbsp;&nbsp;Pendiente gestión <br>
+            <i class="bi bi-square-fill" style="color: blue;"></i>&nbsp;&nbsp;Reprogramado <br>
+            <i class="bi bi-square-fill" style="color: green;"></i>&nbsp;&nbsp;Completado
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main><!-- End #main -->
 
